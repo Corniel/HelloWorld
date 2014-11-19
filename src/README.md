@@ -8,6 +8,13 @@ A blog by Corniel Nobel
 
 This project shows the code as blogged about at my blog.
 
+Idiots
+------
+"Programming today is a race between software engineers striving to build bigger 
+and better idiot-proof programs, and the Universe trying to produce bigger and 
+better idiots. So far, the Universe is winning (..)"
+http://www.corniel.nl/blog/2010/08/16/idiots/
+
 Windows multi icon
 ------------------
 Creating a Windows icon containing multiple bitmaps.
