@@ -8,6 +8,10 @@ A blog by Corniel Nobel
 
 This project shows the code as blogged about at my blog.
 
+Roman numerals
+--------------
+http://www.corniel.nl/blog/2009/08/20/roman-numerals/
+
 WTF (2)
 -------
 Implement or add a todo.
