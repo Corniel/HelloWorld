@@ -8,6 +8,11 @@ A blog by Corniel Nobel
 
 This project shows the code as blogged about at my blog.
 
+ISO 8601
+--------
+A proper way to implement the ISO 8601 standard.
+http://www.corniel.nl/blog/2009/12/18/iso8601/
+
 WTF (3)
 -------
 No comment required.
