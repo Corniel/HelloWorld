@@ -8,6 +8,11 @@ A blog by Corniel Nobel
 
 This project shows the code as blogged about at my blog.
 
+Truusje my lovely ant(s)
+------------------------
+AI programming challenge.
+http://www.corniel.nl/blog/2011/12/24/truusje-my-lovely-ants/
+
 Idiots
 ------
 "Programming today is a race between software engineers striving to build bigger 

@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ants\Instruction.cs" />
+    <Compile Include="Ants\Stuff.cs" />
+    <Compile Include="Ants\Strategy.cs" />
     <Compile Include="Drawing\MultiIcon.cs" />
     <Compile Include="ISO8601.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
