@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +48,8 @@
     <Compile Include="ISO8601.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RomanNumerals.cs" />
+    <Compile Include="Web\DivisionCodeCookie.cs" />
+    <Compile Include="Web\WrappedCookie.cs" />
     <Compile Include="WTF002.cs" />
     <Compile Include="WTF003.cs" />
   </ItemGroup>

@@ -8,6 +8,11 @@ A blog by Corniel Nobel
 
 This project shows the code as blogged about at my blog.
 
+Example of handling cookies Domain-driven
+-----------------------------------------
+Overcomming sealed classes.
+http://www.corniel.nl/blog/2014/11/05/example-of-handling-cookies-domain-driven/
+
 Truusje my lovely ant(s)
 ------------------------
 AI programming challenge.
