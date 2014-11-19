@@ -8,6 +8,11 @@ A blog by Corniel Nobel
 
 This project shows the code as blogged about at my blog.
 
+Debugger display attribute
+--------------------------
+Improve your debug experience.
+http://www.corniel.nl/blog/2014/11/19/debuggerdisplay/
+
 Example of handling cookies Domain-driven
 -----------------------------------------
 Overcomming sealed classes.

@@ -79,6 +79,7 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DebuggerDisplayClassTest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="WTF001Test.vb" />
   </ItemGroup>
@@ -89,6 +90,10 @@
     <ProjectReference Include="..\HelloWorldVB\HelloWorldVB.vbproj">
       <Project>{88ff8bb5-5395-479e-960d-d9eebefd14bb}</Project>
       <Name>HelloWorldVB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj">
+      <Project>{37a04f2b-6e6e-4d7e-aa7d-810cd44896ec}</Project>
+      <Name>HelloWorld</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
