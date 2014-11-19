@@ -8,6 +8,11 @@ A blog by Corniel Nobel
 
 This project shows the code as blogged about at my blog.
 
+Windows multi icon
+------------------
+Creating a Windows icon containing multiple bitmaps.
+http://www.corniel.nl/blog/2010/07/23/windows-multi-icon/
+
 ISO 8601
 --------
 A proper way to implement the ISO 8601 standard.
