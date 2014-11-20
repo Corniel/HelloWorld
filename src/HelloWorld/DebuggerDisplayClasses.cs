@@ -8,6 +8,7 @@ namespace HelloWorld
 	public class DebuggerDisplayClassStringProperty
 	{
 		public int Number { get; set; }
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		private string DebuggerDisplay { get { return this.Number.ToString(CultureInfo.InvariantCulture); } }
 	}
 
@@ -15,6 +16,7 @@ namespace HelloWorld
 	public class DebuggerDisplayClassStringMethod
 	{
 		public int Number { get; set; }
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		private string DebuggerDisplay() { return this.Number.ToString(CultureInfo.InvariantCulture); }
 	}
 
@@ -22,6 +24,7 @@ namespace HelloWorld
 	public class DebuggerDisplayClassObjectProperty
 	{
 		public int Number { get; set; }
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		private int DebuggerDisplay { get { return this.Number; } }
 	}
 
@@ -31,6 +34,7 @@ namespace HelloWorld
 		public int Number { get; set; }
 
 		[ExcludeFromCodeCoverage]
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
 		private int DebuggerDisplay() { return this.Number; }
 	}
 }
