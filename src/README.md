@@ -8,6 +8,10 @@ A blog by Corniel Nobel
 
 This project shows the code as blogged about at my blog.
 
+DateTimeAssert
+--------------
+Doing date time assertions the right way.
+
 Debugger display attribute
 --------------------------
 Improve your debug experience.
@@ -15,7 +19,7 @@ http://www.corniel.nl/blog/2014/11/19/debuggerdisplay/
 
 Example of handling cookies Domain-driven
 -----------------------------------------
-Overcomming sealed classes.
+Overcoming sealed classes.
 http://www.corniel.nl/blog/2014/11/05/example-of-handling-cookies-domain-driven/
 
 Truusje my lovely ant(s)
@@ -51,7 +55,7 @@ http://www.corniel.nl/blog/2009/08/20/roman-numerals/
 
 WTF (2)
 -------
-Implement or add a todo.
+Implement or add a to-do.
 http://www.corniel.nl/blog/2009/08/14/wtf-2/
 
 WTF (1)
