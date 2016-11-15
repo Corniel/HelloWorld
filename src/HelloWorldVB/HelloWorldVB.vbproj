@@ -66,6 +66,12 @@
     <Compile Include="WTF1.vb" />
     <Compile Include="YetAnotherLimitationInVbNet.vb" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj">
+      <Project>{37a04f2b-6e6e-4d7e-aa7d-810cd44896ec}</Project>
+      <Name>HelloWorld</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
