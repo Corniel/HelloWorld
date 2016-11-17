@@ -17,7 +17,7 @@ namespace HelloWorld.Buildstuff2016
 
 			foreach(var color in colors)
 			{
-				for(var val = 2; val <=14; val++)
+				for (var val = 2; val <= 14; val++)
 				{
 					list.Add(new Card((int)color, val));
 				}

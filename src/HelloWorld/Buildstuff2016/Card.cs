@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace HelloWorld.Buildstuff2016
 {
 	[DebuggerDisplay("{DebuggerDisplay}")]
-	public struct Card
+	public struct Card : IFormattable, IComparable<Card>
 	{
-		private const string Colors = "♠♥♣♦";
+		private const string Colors = "SHCD";
+		private const string Symbols = "♠♥♣♦";
 		private const string Values = "  23456789TJQKA";
 
 		private readonly int value;
@@ -21,24 +23,29 @@ namespace HelloWorld.Buildstuff2016
 
 		public override int GetHashCode() { return value; }
 
+		public string ToString(string format, IFormatProvider formatProvider)
+		{
+			var formatted = "f" == format;
+			var symbol = formatted ? Symbols[(int)Color] : Colors[(int)Color];
+			var number = Values[Value].ToString();
+			if (formatted) { number= number.Replace("T", "10"); }
+			return string.Format("{0}{1}", symbol, number);
+		}
+
 		public override string ToString()
 		{
-			return string.Format("{0}{1}", Color.ToString()[0], Values[Value]);
+			return ToString(null, null);
 		}
 
 		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-		public string DebuggerDisplay { get {
-				var str = string.Format("{0}{1}", Colors[(int)Color], Values[Value]);
-				return str.Replace("T", "10");
-			}
-		}
+		public string DebuggerDisplay { get { return ToString("f", CultureInfo.InvariantCulture); } }
 
 		public static Card Parse(string value)
 		{
 			if (!string.IsNullOrEmpty(value) && value.Length == 2)
 			{
 				value = value.ToUpperInvariant();
-				var color = "SHCD".IndexOf(value[0]);
+				var color = Math.Max(Colors.IndexOf(value[0]), Symbols.IndexOf(value[0]));
 				var val = Values.IndexOf(value[1]);
 				if (color != -1 && val > 1)
 				{
@@ -47,5 +54,7 @@ namespace HelloWorld.Buildstuff2016
 			}
 			throw new ArgumentException("Not a playing card.");
 		}
+
+		public int CompareTo(Card other) { return value.CompareTo(other.value); }
 	}
 }
