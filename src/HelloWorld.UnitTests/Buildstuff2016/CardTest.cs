@@ -6,13 +6,13 @@ namespace HelloWorld.UnitTests.Buildstuff2016
 	[TestFixture]
 	public class CardTest
 	{
-		[TestCase("cT", CardColor.Club, 10)]
-		[TestCase("h2", CardColor.Heart, 2)]
-		[TestCase("S7", CardColor.Spade, 7)]
-		public void Parse(string value, CardColor expectedColor, int expectedValue)
+		[TestCase("cT", Suit.Club, 10)]
+		[TestCase("h2", Suit.Heart, 2)]
+		[TestCase("S7", Suit.Spade, 7)]
+		public void Parse(string value, Suit expectedColor, int expectedValue)
 		{
 			var card = Card.Parse(value);
-			Assert.AreEqual(expectedColor, card.Color);
+			Assert.AreEqual(expectedColor, card.Suit);
 			Assert.AreEqual(expectedValue, card.Value);
 		}
 

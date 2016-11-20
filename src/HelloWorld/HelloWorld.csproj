@@ -44,7 +44,7 @@
     <Compile Include="*.cs" />
     <Compile Include="Ants\*.cs" />
     <Compile Include="Buildstuff2016\Card.cs" />
-    <Compile Include="Buildstuff2016\CardColor.cs" />
+    <Compile Include="Buildstuff2016\Suit.cs" />
     <Compile Include="Buildstuff2016\Cards.cs" />
     <Compile Include="Drawing\*.cs" />
     <Compile Include="Qowaiv\TestTools\*.cs" />

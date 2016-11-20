@@ -1,6 +1,6 @@
 ﻿namespace HelloWorld.Buildstuff2016
 {
-	public enum CardColor
+	public enum Suit
 	{
 		Spade,
 		Heart,

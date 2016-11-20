@@ -5,6 +5,11 @@ using System.Linq;
 
 namespace HelloWorld.Buildstuff2016
 {
+	/// <summary>An implementation of a set of cards.</summary>
+	/// <remarks>
+	/// It really depends on the kind of things you want to do if creating a
+	/// <see cref="List{Card}"/> is smart thing to do. So, this one is just for inspiration.
+	/// </remarks>
 	public class Cards: List<Card>
 	{
 		private static readonly Random rnd = new Random();
@@ -13,7 +18,7 @@ namespace HelloWorld.Buildstuff2016
 		private static IList<Card> GetDeck()
 		{
 			var list = new List<Card>();
-			var colors = new []{ CardColor.Club, CardColor.Heart, CardColor.Spade, CardColor.Diamond };
+			var colors = new []{ Suit.Club, Suit.Heart, Suit.Spade, Suit.Diamond };
 
 			foreach(var color in colors)
 			{
