@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<PropertyGroup>
+		<Authors>Corniel Nobel</Authors>
+		<Product>HelloWorld</Product>
+		<Copyright>Corniel Nobel,  2014-2019</Copyright>
+		<PackageProjectUrl>www.corniel.nl/blog/category/helloworld</PackageProjectUrl>
+		<PackageLicenseUrl>https://github.com/Corniel/HelloWorld/blob/master/license.md</PackageLicenseUrl>
+		<RepositoryUrl>https://github.com/Corniel/HelloWorld</RepositoryUrl>
+		<RepositoryType>GIT</RepositoryType>
+		<Description>This project shows the code as blogged about at my blog.</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="SonarAnalyzer.CSharp" Version="7.10.0.7896">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="SonarAnalyzer.VisualBasic" Version="7.10.0.7896">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<!-- for code coverage an proper debugging -->
+	<PropertyGroup>
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+	
+</Project>

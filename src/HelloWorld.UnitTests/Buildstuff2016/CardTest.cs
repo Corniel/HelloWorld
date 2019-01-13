@@ -17,7 +17,7 @@ namespace HelloWorld.UnitTests.Buildstuff2016
 		}
 
 		[TestCase("cT", "♣10")]
-		[TestCase("h2", "♠2")]
+		[TestCase("h2", "♥2")]
 		[TestCase("S7", "♠7")]
 		public void DebuggerDisplay(string value, string expected)
 		{

@@ -16,6 +16,8 @@ Public Class WTF001Test
 		Dim act As String = HelloWorldVB.WTF1.DecimalSeparator()
 		Dim exp As String = "."
 
+		Assert.AreEqual(exp, act)
+
 	End Sub
 
 	<Test>
@@ -23,6 +25,8 @@ Public Class WTF001Test
 
 		Dim act As String = HelloWorldVB.WTF1_.DecimalSeparator
 		Dim exp As String = "."
+
+		Assert.AreEqual(exp, act)
 
 	End Sub
 

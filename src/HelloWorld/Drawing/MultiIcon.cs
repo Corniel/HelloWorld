@@ -94,8 +94,6 @@ namespace HelloWorld.Drawing
 		{
 			using (var writer = new BinaryWriter(stream))
 			{
-				long startposition = stream.Position;
-
 				var entries = new List<MultiIconEntry>();
 				var buffers = new List<byte[]>();
 				// create header.
@@ -126,9 +124,9 @@ namespace HelloWorld.Drawing
 							// BitCount[2]
 							// BytesInRes[4]
 							// none.OffSet[4]
-							var header_reserved = reader.ReadInt16();
-							var header_type = reader.ReadInt16();
-							var none_startpos = reader.ReadInt16();
+							/*var header_reserved =*/ reader.ReadInt16();
+							/*var header_type =    */ reader.ReadInt16();
+							/*var none_startpos =  */ reader.ReadInt16();
 							entry.Width = reader.ReadByte();
 							entry.Height = reader.ReadByte();
 							entry.ColorCount = reader.ReadByte();
@@ -137,7 +135,7 @@ namespace HelloWorld.Drawing
 							entry.BitCount = reader.ReadInt16();
 							entry.BytesInRes = reader.ReadInt32();
 							entry.ImageOffset = MultiIconHeader.ByteSize + MultiIconEntry.ByteSize * icons.Count + buffers.Sum(buf => buf.Length);
-							var none_offset = reader.ReadInt32();
+							/*var none_offset = */ reader.ReadInt32();
 
 							var buffer = new byte[icon_stream.Length - icon_stream.Position];
 							icon_stream.Read(buffer, 0, buffer.Length);

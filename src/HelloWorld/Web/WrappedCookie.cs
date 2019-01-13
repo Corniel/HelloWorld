@@ -14,8 +14,7 @@ namespace HelloWorld.Web
 		/// <summary>Initials a new wrapped cookie based on an HTTP cookie.</summary>
 		protected WrappedCookie(HttpCookie httpCookie)
 		{
-			if (httpCookie == null) { throw new ArgumentNullException("httpCookie"); }
-			this.UnderlingCookie = httpCookie;
+			UnderlingCookie = httpCookie ?? throw new ArgumentNullException("httpCookie");
 		}
 
 		/// <summary>Initials a new wrapped cookie based on an user ID.</summary>
@@ -32,9 +31,8 @@ namespace HelloWorld.Web
 		{
 			get
 			{
-				Guid userid;
 
-				if (this.Name.StartsWith("ExactServer{")&& Guid.TryParseExact(this.Name.Substring(11), "B", out userid))
+				if (Name.StartsWith("ExactServer{") && Guid.TryParseExact(this.Name.Substring(11), "B", out Guid userid))
 				{
 					return userid;
 				}

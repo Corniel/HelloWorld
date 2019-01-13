@@ -8,8 +8,10 @@ Public Class DebuggerDisplayClassTest
 	<Test>
 	Public Sub DebuggerDisplay_StringMethod_String17()
 
-		Dim cls As DebuggerDisplayClassStringMethod = New DebuggerDisplayClassStringMethod()
-		cls.Number = 17
+		Dim cls As New DebuggerDisplayClassStringMethod With
+		{
+			.Number = 17
+		}
 		Dim dd As MethodInfo = cls.GetType().GetMethod("DebuggerDisplay", BindingFlags.Instance Or BindingFlags.NonPublic)
 
 		Dim act As Object = dd.Invoke(cls, Nothing)
@@ -21,8 +23,10 @@ Public Class DebuggerDisplayClassTest
 	<Test>
 	Public Sub DebuggerDisplay_ObjectMethod_Int17()
 
-		Dim cls As DebuggerDisplayClassObjectMethod = New DebuggerDisplayClassObjectMethod()
-		cls.Number = 17
+		Dim cls As New DebuggerDisplayClassObjectMethod With
+		{
+			.Number = 17
+		}
 
 		Dim dd As MethodInfo = cls.GetType().GetMethod("DebuggerDisplay", BindingFlags.Instance Or BindingFlags.NonPublic)
 
@@ -35,8 +39,10 @@ Public Class DebuggerDisplayClassTest
 	<Test>
 	Public Sub DebuggerDisplay_StringProperty_String17()
 
-		Dim cls As DebuggerDisplayClassStringProperty = New DebuggerDisplayClassStringProperty()
-		cls.Number = 17
+		Dim cls As New DebuggerDisplayClassStringProperty With
+		{
+			.Number = 17
+		}
 		Dim dd As PropertyInfo = cls.GetType().GetProperty("DebuggerDisplay", BindingFlags.Instance Or BindingFlags.NonPublic)
 
 		Dim act As Object = dd.GetValue(cls)
@@ -48,8 +54,10 @@ Public Class DebuggerDisplayClassTest
 	<Test>
 	Public Sub DebuggerDisplay_ObjectProperty_Int17()
 
-		Dim cls As DebuggerDisplayClassObjectProperty = New DebuggerDisplayClassObjectProperty()
-		cls.Number = 17
+		Dim cls As New DebuggerDisplayClassObjectProperty With
+		{
+			.Number = 17
+		}
 
 		Dim dd As PropertyInfo = cls.GetType().GetProperty("DebuggerDisplay", BindingFlags.Instance Or BindingFlags.NonPublic)
 
