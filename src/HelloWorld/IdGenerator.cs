@@ -18,10 +18,13 @@ namespace HelloWorld
         /// </remarks>
         public static Guid ByDate(DateTime date, Guid guid)
         {
-            var ticks = date.Ticks - TicksYear2000;
-            var prefix = BitConverter.GetBytes((uint)(ticks >> 25));
             var bytes = guid.ToByteArray();
-            Buffer.BlockCopy(prefix, 0, bytes, 0, 4);
+            var ticks = date.Ticks - TicksYear2000;
+            var time = BitConverter.GetBytes((uint)(ticks >> 25));
+            bytes[0] = time[3];
+            bytes[1] = time[2];
+            bytes[2] = time[1];
+            bytes[3] = time[0];
             return new Guid(bytes);
         }
     }
