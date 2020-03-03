@@ -9,7 +9,7 @@ namespace HelloWorld.UnitTests
         public void ByDate_2020Y01M26DWithSomeGuid_TheFirst4ByteShouldBeDifferent()
         {
             var id = IdGenerator.ByDate(new DateTime(2020,01,26), Guid.Parse("be54bc45-f368-42ba-9c4c-b79c362382c8"));
-            var expected = Guid.Parse("0b3ff833-f368-42ba-9c4c-b79c362382c8");
+            var expected = Guid.Parse("33f83f0b-f368-42ba-9c4c-b79c362382c8");
             Assert.AreEqual(expected, id);
         }
 
