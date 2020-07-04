@@ -10,10 +10,5 @@
 		<RepositoryType>GIT</RepositoryType>
 		<Description>This project shows the code as blogged about at my blog.</Description>
 	</PropertyGroup>
-
-	<!-- for code coverage an proper debugging -->
-	<PropertyGroup>
-		<DebugType>full</DebugType>
-	</PropertyGroup>
 	
 </Project>
