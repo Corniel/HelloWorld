@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace HelloWorld
+﻿namespace HelloWorld
 {
     public static class FizzBuzz
     {
