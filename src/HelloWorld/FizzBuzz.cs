@@ -3,6 +3,22 @@
     public static class FizzBuzz
     {
         /// <summary>Straightforward approach.</summary>
+        public static string WithSwitch(int n)
+        {
+            switch (n % 15)
+            {
+                case 0: return "FizzBuzz";
+                case 3:
+                case 6:
+                case 9:
+                case 12: return "Fizz";
+                case 5:
+                case 10: return "Buzz";
+                default: return n.ToString();
+            }
+        }
+
+        /// <summary>Straightforward approach.</summary>
         public static string WithConditionalOperator(int n) =>
             n % 3 == 0
             ? n % 5 != 0 ? "Fizz" : "FizzBuzz"

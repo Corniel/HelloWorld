@@ -8,7 +8,13 @@ namespace HelloWorld.UnitTests
     public class FizzBuzzTest
     {
         [TestCaseSource(nameof(Records))]
-        public void WiWithConditionalOperator(int number, string expected)
+        public void WithSwitch(int number, string expected)
+        {
+            AssertFx(expected, number, FizzBuzz.WithSwitch);
+        }
+
+        [TestCaseSource(nameof(Records))]
+        public void WithConditionalOperator(int number, string expected)
         {
             AssertFx(expected, number, FizzBuzz.WithConditionalOperator);
         }
