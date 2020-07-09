@@ -2,6 +2,15 @@
 {
     public static class FizzBuzz
     {
+        /// <summary>Extending the string result.</summary>
+        public static string StringConcat(int n)
+        {
+            string s = null;
+            if (n % 3 == 0) s += "Fizz";
+            if (n % 5 == 0) s += "Buzz";
+            return s ?? n.ToString();
+        }
+
         /// <summary>Straightforward approach.</summary>
         public static string WithSwitch(int n)
         {
