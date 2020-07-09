@@ -7,23 +7,6 @@ namespace HelloWorld.UnitTests
 {
     public class FizzBuzzTest
     {
-        [Test]
-        public void Rnd()
-        {
-            Console.WriteLine("300102100120100");
-            for(var i = 0; i < int.MaxValue; i++)
-            {
-                var pattern = string.Concat(Enumerable
-                    .Range(0, 15)
-                    .Select(n => new Random(i+n).Next(4)));
-
-                if (pattern == "300102100120100")
-                {
-                    Assert.Fail(i.ToString());
-                }
-            }
-        }
-
         [TestCaseSource(nameof(Records))]
         public void StringConcat(int number, string expected)
         {
