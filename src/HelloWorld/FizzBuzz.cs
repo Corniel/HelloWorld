@@ -13,23 +13,17 @@
 
         /// <summary>Straightforward approach.</summary>
         public static string WithSwitch(int n)
-        {
-            switch (n % 15)
+            => (n % 15) switch
             {
-                case 0: return "FizzBuzz";
-                case 3:
-                case 6:
-                case 9:
-                case 12: return "Fizz";
-                case 5:
-                case 10: return "Buzz";
-                default: return n.ToString();
-            }
-        }
+                0 => "FizzBuzz",
+                3 or 6 or 9 or 12 => "Fizz",
+                5 or 10 => "Buzz",
+                _ => n.ToString(),
+            };
 
         /// <summary>Straightforward approach.</summary>
-        public static string WithConditionalOperator(int n) =>
-            n % 3 == 0
+        public static string WithConditionalOperator(int n)
+            => n % 3 == 0
             ? n % 5 != 0 ? "Fizz" : "FizzBuzz"
             : n % 5 == 0 ? "Buzz" : n.ToString();
 
