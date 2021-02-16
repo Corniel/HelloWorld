@@ -4,8 +4,8 @@ namespace Rounding_specs
 {
     public class Negative_decimals
     {
-        [TestCase(123456.78, -2, 123456.78)]
-        [TestCase(123456.78, -1, 123456.8)]
+        [TestCase(123456.78, +2, 123456.78)]
+        [TestCase(123456.78, +1, 123456.8)]
         [TestCase(123456.78, +0, 123457)]
         [TestCase(123456.78, -1, 123460)]
         [TestCase(123456.78, -2, 123500)]
