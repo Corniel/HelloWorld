@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Knight_move_specs
 {
@@ -14,8 +15,30 @@ namespace Knight_move_specs
         }
 
         private IEnumerable<string> KnightMoves(string square)
+            => OnBoard(square)
+            ? Transforms.Select(tranform => new string(new[]
+            {
+                (char)(square[0] + tranform[0]),
+                (char)(square[1] + tranform[1])
+            })).Where(OnBoard)
+            : Array.Empty<string>();
+
+        private readonly int[][] Transforms = new[] 
         {
-            return Array.Empty<string>();
-        }
+            new[] { -2, -1 },
+            new[] { -1, -2 },
+            new[] { -2, +1 },
+            new[] { +1, -2 },
+
+            new[] { +2, +1 },
+            new[] { +1, +2 },
+            new[] { +2, -1 },
+            new[] { -1, +2 },
+        };
+
+        private bool OnBoard(string square)
+            => square?.Length == 2
+            && square[0] >= 'A' && square[0] <= 'H'
+            && square[1] >= '1' && square[1] <= '8';
     }
 }
