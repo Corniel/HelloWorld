@@ -39,7 +39,7 @@ namespace Specs
         [Test]
         public void Not_True_is_False()
         {
-            var negated = ~True;
+            var negated = !True;
             Assert.That(negated.Invoke(null), Is.False);
         }
     }
